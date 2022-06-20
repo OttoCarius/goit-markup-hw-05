@@ -145,7 +145,10 @@ ul {
 .mail-icon{margin-right: 10px;
     fill: currentColor;
     }
-
+.contact-list a {
+    display: flex;
+    align-items: center;
+}
 
 
 /* Контент */
@@ -224,37 +227,56 @@ ul {
     line-height: 1.71;
     text-align: left;
 }
-.feature-list{ display: flex; 
-    justify-content: space-evenly;}
 
-.feature-list li {width: 270px}
+.feature-list {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.feature-list li {
+    width: 270px
+}
 
 
-.feature-list>li:not(:first-child){margin-left: 30px;}
+.feature-list>li:not(:first-child) {
+    margin-left: 30px;
+}
 
 .title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    margin-bottom: 10px;}
-
-.list-item::before{content: "";
-/* outline: 1px solid red; */
-background-color: var(--bgcolorquaternary);
-display: block;
-height: 120px;
-background-image: url(../images/antenna.svg);
-background-repeat: no-repeat;
-background-position: center;
-margin-bottom: 30px;
-padding: 25px 100px;
+    margin-bottom: 10px;
 }
-.icon-antenna::before{background-image: url(../images/antenna.svg);}
-.icon-clock::before{background-image: url(../images/clock.svg);}
-.icon-diagram::before{background-image: url(../images/diagram.svg);}
-.icon-astronaut::before{background-image: url(../images/astronaut.svg);}
 
+.list-item::before {
+    content: "";
+    /* outline: 1px solid red; */
+    background-color: var(--bgcolorquaternary);
+    display: block;
+    height: 120px;
+    background-image: url(../images/antenna.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+    background-image: url(../images/antenna.svg);
+}
+
+.icon-clock::before {
+    background-image: url(../images/clock.svg);
+}
+
+.icon-diagram::before {
+    background-image: url(../images/diagram.svg);
+}
+
+.icon-astronaut::before {
+    background-image: url(../images/astronaut.svg);
+}
 
 /* < !--Чем занимаемся--> */
 
@@ -352,8 +374,10 @@ padding: 25px 100px;
 border-color:var(--colorSecondary);
 }
 
-.team-soc-link:hover .team-soc-icon{fill: var(--bgcolorquaternary);}
-
+.team-soc-link:hover .team-soc-icon,
+.team-soc-link:focus .team-soc-icon {
+    fill: var(--bgcolorquaternary);
+}
 /* < !-- Section customers --> */
 
 
@@ -374,6 +398,7 @@ justify-content: center;
     padding: 16px 32px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
 }
 
 
@@ -389,7 +414,10 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 }
 /* background-color: var(--bgColorPrimary); */
 
-.customers-link:hover .customers-icon{fill:var(--colorSecondary)}
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
+    fill: var(--colorSecondary);
+}
 
 
 
@@ -462,7 +490,7 @@ align-items: baseline;}
     background-color: rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
     padding: 12px;
     
     transition-duration: 250ms;
@@ -502,6 +530,7 @@ border-color:var(--colorSecondary);}
 .h1-hide {display: none;}
 
 .button-categories{background-color: var(--bgcolorquaternary);
+    display: block;
     border: none;
     font-weight: 500;
     font-size: 16px;
@@ -561,6 +590,19 @@ flex-wrap: wrap;
  .list-projects>li:nth-child(3n + 1) {
      margin-left: 0px;}
 
+
+.list-projects>li>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.list-projects>li>a:hover,
+.list-projects>li>a:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .list-projects img {display: block;
  }
 
@@ -582,13 +624,17 @@ flex-wrap: wrap;
     }
 
  .list-projects a {
-    text-decoration: none;}
+    text-decoration: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
 
 .list-projects>li {
     margin-bottom: 30px;
     margin-left: 30px;}
 
-.list-projects>li >a:hover
-.list-projects>li>a:focus{border: 1px solid #EEEEEE;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);}
+
+.list-projects>li>a:hover .list-projects>li>a:focus {
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
