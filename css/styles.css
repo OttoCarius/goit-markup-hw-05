@@ -201,7 +201,7 @@ ul {
 
     /* transition: var(--colorTertiary); */
 
-    transition-property: color;
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -304,10 +304,31 @@ ul {
 .work-list{
     display: flex;
     justify-content: space-between;
+    
 }
 
 
 .work-list img{display: block;}
+
+.work-list>li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+.work-description{
+    position: absolute;
+    bottom: 0;
+    padding: 27px 0px;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 0.8);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
 
 
                  /* < !--Команда--> */
