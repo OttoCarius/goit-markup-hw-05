@@ -91,9 +91,11 @@ ul {
             color: var(--colorSecondary);
         }
     
-.list .current{
+.current> a{
             color: var(--colorSecondary);
         }
+
+.current-portfolio> a{color: var(--colorSecondary);}
 
 .list-li {
     position: relative;}
@@ -135,6 +137,7 @@ ul {
 .contacts {color: var(--colorTertiary);
     text-decoration: none;
     transition: var(--transition);
+    
 }
 
 .contact-list>li:not(:first-child) {margin-left: 30px;}
@@ -146,7 +149,7 @@ ul {
 .mail-icon{margin-right: 10px;
     fill: currentColor;
     }
-    
+
 .contact-list a {
     display: flex;
     align-items: center;
@@ -196,6 +199,9 @@ ul {
     letter-spacing: 0.06em;
     cursor: pointer;
 
+    /* transition: var(--colorTertiary); */
+
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -363,12 +369,15 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .team-soc-icon{fill:#AFB1B8;
-    
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -399,6 +408,7 @@ justify-content: center;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     padding: 16px 32px;
+    transition-property:border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
@@ -408,6 +418,7 @@ justify-content: center;
 .customers-li:not(:first-child) {margin-left: 30px;}
 
 .customers-icon{fill:#AFB1B8;
+transition-property: fill;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
@@ -445,6 +456,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
    .footer .link{ color: var(--ColorFooterLink);
    text-decoration: none;
 
+    transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -495,7 +507,7 @@ align-items: baseline;}
     align-items: center;
     justify-content: center;
     padding: 12px;
-    
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -605,7 +617,7 @@ border-color:var(--colorSecondary);}
     padding: 6px 22px;
     border-radius: 4px;
 
-    
+    transition-property: color, background-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -676,7 +688,8 @@ height: 100%;} */
     padding: 63px 24px;
     height: 100%;
     transform: translateY(100%);
-
+    
+    transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -733,6 +746,7 @@ height: 100%;} */
 
  .list-projects a {
     text-decoration: none;
+    transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
